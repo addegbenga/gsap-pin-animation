@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pinned-panel img {
+  opacity: 0;
+  z-index: 0;
+  position: absolute;
+  transition: opacity 0.3s ease-in-out, z-index 0.3s ease-in-out;
+}
+
+.pinned-panel img.show {
+  opacity: 1;
+  z-index: 1;
+}
