@@ -39,7 +39,7 @@
       <div class="border h-[20rem] w-full"></div>
     </div>
     <div class="scroller grid bg-red-200 grid-cols-2 pb-[10rem] gap-10">
-      <section class="grid gap-20 scrollable border-2 h-fit">
+      <section class="grid gap-[20rem] scrollable border-2 h-fit">
         <section class="p-7 h-fit scrollable1 w-fit flex">
           <div class="pr-10 grid gap-10">
             <h1 class="text-4xl font-bold">
@@ -115,13 +115,17 @@ onMounted(() => {
         scrollTrigger: {
           // @ts-ignore
           trigger: section,
-          start: "top center+=300px",
+          start: "top center+=200px",
           // end: "bottom center+=500px",
           onEnter: () => {
             imageElements[index].classList.toggle("show");
             console.log(index, "check the current section index here");
           },
           onLeaveBack: () => {
+            imageElements[index].classList.toggle("show");
+            console.log(index, "check the current section index here leaving");
+          },
+          onEnterBack: () => {
             imageElements[index].classList.toggle("show");
             console.log(index, "check the current section index here");
           },
